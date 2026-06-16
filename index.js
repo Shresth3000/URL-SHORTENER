@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const staticRoute=require("./routes/staticRoute");
 const app = express();
+app.use(express.static("public"));
 const URL = require("./models/url");
 const { connectMongoDb } = require("./connection");
 const urlRoute = require("./routes/url");
